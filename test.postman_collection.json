@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "20f39c17-1cb0-4976-b6af-47e7bc0732cc",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9535268"
+	},
+	"item": [
+		{
+			"name": "http://www.omdbapi.com/?t=gangster&apikey=8bf22c25",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.omdbapi.com/?t=gangster&apikey=8bf22c25",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "t",
+							"value": "gangster"
+						},
+						{
+							"key": "apikey",
+							"value": "8bf22c25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/authentication/log-out",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "Authentication=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1OTMxNDIzNCwiZXhwIjoxNjU5NDIyMjM0fQ.LgAttt1zVP7EwNyc_3d9Ankmb_Dlma6EKkQWhdGl9Ug;",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authentication/log-out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authentication",
+						"log-out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/authentication/log-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"karanschdev@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/authentication/log-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authentication",
+						"log-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/authentication/imdb-search-result-by-title?title=gangster",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "Authentication=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1OTMxOTY3MiwiZXhwIjoxNjU5NDI3NjcyfQ.yYNjvwWH5EZWcDwjAJzDu-uRYOVojWi0umAEWh4Deoc;",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authentication/imdb-search-result-by-title?title=gangster",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authentication",
+						"imdb-search-result-by-title"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "gangster"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
